@@ -6,7 +6,7 @@ USE ky;#进入ky
 CREATE TABLE ky_user(
     uid INT PRIMARY KEY AUTO_INCREMENT,
     uname VARCHAR(16),
-    password VARCHAR(16),
+    upwd VARCHAR(16),
     email VARCHAR(32),
     phone VARCHAR(16),
     avatar VARCHAR(128),      #头像
