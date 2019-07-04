@@ -1,10 +1,29 @@
-<h2>用户注册<h2>
-<form method="post" action="/user/reg">
-用户:<input type="text" name="uname"><br>
-密码:<input type="text" name="upwd"><br>
-手机:<input type="text" name="phone"><br>
-邮箱:<input type="text" name="email"><br>
-真实姓名：<input type="text" name="user_name"><br>
-性别：<input type="text" name="gender"><br>
-<input type="submit">
-</form>
+<!doctype html>
+<html lang="en">
+   <head>
+     <title></title>
+       <meta charset="utf-8"></meta>
+   </head>
+	 <body>
+     <form method="post" action="/user/reg" enctype="multipart/form-data">
+		   <fieldset style="width:400px;">
+			 <legend>用户注册</legend>
+			   <p>用户名称:
+		   		  <input type="text" name="uname"  maxlength="16" placeholder="16个以内的字母或数字"></p>
+		      <p>用户密码:
+		   		  <input type="password" name="upwd" maxlength="16" ></P>
+					<p>用户电话:
+					  <input type="tel" name="phone"></p>
+					<p>用户邮箱:
+					   <input type="email" name="email"></p>
+					<p>真实姓名:
+					   <input type="text" name="user_name"></p>
+		   		<p>用户性别:
+		   		  <input type="radio" name="gender" value="1" id="r1"><label for="r1">男</label>
+            <input type="radio" name="gender" value="0" id="r2"><label for="r2">女</label>
+          <p><input type="submit" value="免费注册">
+					</p>
+			 </fieldset>
+			</form>
+	 </body>
+</html>

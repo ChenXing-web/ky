@@ -21,7 +21,7 @@ CREATE TABLE ky_index_carousel(
   cid INT PRIMARY KEY AUTO_INCREMENT,
   img VARCHAR(128),
   title VARCHAR(64),
-  url VARCHAR(128)
+  href VARCHAR(128)
 );
 INSERT INTO ky_index_carousel VALUES (NULL, 'img/index/banner1.png','轮播电影1','1.html');
 INSERT INTO ky_index_carousel VALUES (NULL, 'img/index/banner2.png','轮播电影2','2.html');
@@ -32,7 +32,7 @@ CREATE TABLE ky_hot_movie(
   img VARCHAR(128),
   title VARCHAR(64),
   synopsis VARCHAR(500),
-  url VARCHAR(128),
+  href VARCHAR(128),
   price DECIMAL(10,2)
 );
 INSERT INTO ky_hot_movie VALUES ('img/index/5.png','最热电影','电影简介','5.html','27.00');
@@ -42,7 +42,7 @@ CREATE TABLE ky_now_movie(
   img VARCHAR(128),
   title VARCHAR(64),
   synopsis VARCHAR(500),
-  url VARCHAR(128)
+  href VARCHAR(128)
 );
 INSERT INTO ky_now_movie VALUES (NULL,'img/index/6.png','正在上映电影1','电影简介','6.html');
 INSERT INTO ky_now_movie VALUES (NULL,'img/index/7.png','正在上映电影2','电影简介','7.html');
@@ -57,7 +57,7 @@ CREATE TABLE ky_upcoming_movie(
   title VARCHAR(64),
   synopsis VARCHAR(500),
   showtime date,
-  url VARCHAR(128)
+  href VARCHAR(128)
 );
 INSERT INTO ky_upcoming_movie VALUES (NULL,'img/index/12.png','即将上映电影1','电影简介','2019-8-8','12.html');
 INSERT INTO ky_upcoming_movie VALUES (NULL,'img/index/13.png','即将上映电影2','电影简介','2019-8-8','13.html');
@@ -65,3 +65,29 @@ INSERT INTO ky_upcoming_movie VALUES (NULL,'img/index/14.png','即将上映电�
 INSERT INTO ky_upcoming_movie VALUES (NULL,'img/index/15.png','即将上映电影4','电影简介','2019-8-8','15.html');
 INSERT INTO ky_upcoming_movie VALUES (NULL,'img/index/16.png','即将上映电影5','电影简介','2019-8-8','16.html');
 INSERT INTO ky_upcoming_movie VALUES (NULL,'img/index/17.png','即将上映电影6','电影简介','2019-8-8','17.html');
+/**创建关注度表**/
+CREATE TABLE ky_attention_movie(
+  aid INT PRIMARY KEY AUTO_INCREMENT,
+  title VARCHAR(64),
+  href VARCHAR(128),
+  attention INT
+);
+INSERT INTO ky_attention_movie VALUES (NULL,'电影1','18.html','5000');
+INSERT INTO ky_attention_movie VALUES (NULL,'电影2','19.html','4000');
+INSERT INTO ky_attention_movie VALUES (NULL,'电影3','19.html','3000');
+INSERT INTO ky_attention_movie VALUES (NULL,'电影4','20.html','2000');
+INSERT INTO ky_attention_movie VALUES (NULL,'电影5','21.html','1000');
+/**创建苏州影院表**/
+CREATE TABLE ky_SZ_cinema(
+  cid INT PRIMARY KEY AUTO_INCREMENT,
+  title VARCHAR(64),
+  img VARCHAR(128),
+  address VARCHAR(128),
+  tel VARCHAR(20),
+  price  DECIMAL(10,2)
+);
+INSERT INTO ky_SZ_cinema VALUES (NULL,'影院1','img/index/19.png','地址1','0512-66902010','24.00');
+INSERT INTO ky_SZ_cinema VALUES (NULL,'影院1','img/index/20.png','地址2','0512-66902010','24.00');
+INSERT INTO ky_SZ_cinema VALUES (NULL,'影院1','img/index/21.png','地址3','0512-66902010','24.00');
+INSERT INTO ky_SZ_cinema VALUES (NULL,'影院1','img/index/22.png','地址4','0512-66902010','24.00');
+INSERT INTO ky_SZ_cinema VALUES (NULL,'影院1','img/index/23.png','地址5','0512-66902010','24.00');
