@@ -91,3 +91,45 @@ INSERT INTO ky_SZ_cinema VALUES (NULL,'影院1','img/index/20.png','地址2','05
 INSERT INTO ky_SZ_cinema VALUES (NULL,'影院1','img/index/21.png','地址3','0512-66902010','24.00');
 INSERT INTO ky_SZ_cinema VALUES (NULL,'影院1','img/index/22.png','地址4','0512-66902010','24.00');
 INSERT INTO ky_SZ_cinema VALUES (NULL,'影院1','img/index/23.png','地址5','0512-66902010','24.00');
+/**创建上海影院表**/
+CREATE TABLE ky_SH_cinema(
+  cid INT PRIMARY KEY AUTO_INCREMENT,
+  title VARCHAR(64),
+  img VARCHAR(128),
+  address VARCHAR(128),
+  tel VARCHAR(20),
+  price  DECIMAL(10,2)
+);
+INSERT INTO ky_SH_cinema VALUES (NULL,'影院1','img/index/19.png','地址1','0512-66902010','24.00');
+INSERT INTO ky_SH_cinema VALUES (NULL,'影院1','img/index/20.png','地址2','0512-66902010','24.00');
+INSERT INTO ky_SH_cinema VALUES (NULL,'影院1','img/index/21.png','地址3','0512-66902010','24.00');
+INSERT INTO ky_SH_cinema VALUES (NULL,'影院1','img/index/22.png','地址4','0512-66902010','24.00');
+INSERT INTO ky_SH_cinema VALUES (NULL,'影院1','img/index/23.png','地址5','0512-66902010','24.00');
+/**创建南京影院表**/
+CREATE TABLE ky_NJ_cinema(
+  cid INT PRIMARY KEY AUTO_INCREMENT,
+  title VARCHAR(64),
+  img VARCHAR(128),
+  address VARCHAR(128),
+  tel VARCHAR(20),
+  price  DECIMAL(10,2)
+);
+INSERT INTO ky_NJ_cinema VALUES (NULL,'影院1','img/index/19.png','地址1','0512-66902010','24.00');
+INSERT INTO ky_NJ_cinema VALUES (NULL,'影院1','img/index/20.png','地址2','0512-66902010','24.00');
+INSERT INTO ky_NJ_cinema VALUES (NULL,'影院1','img/index/21.png','地址3','0512-66902010','24.00');
+INSERT INTO ky_NJ_cinema VALUES (NULL,'影院1','img/index/22.png','地址4','0512-66902010','24.00');
+INSERT INTO ky_NJ_cinema VALUES (NULL,'影院1','img/index/23.png','地址5','0512-66902010','24.00');
+/**创建常州影院表**/
+CREATE TABLE CZ_SZ_cinema(
+  cid INT PRIMARY KEY AUTO_INCREMENT,
+  title VARCHAR(64),
+  img VARCHAR(128),
+  address VARCHAR(128),
+  tel VARCHAR(20),
+  price  DECIMAL(10,2)
+);
+INSERT INTO ky_CZ_cinema VALUES (NULL,'影院1','img/index/19.png','地址1','0512-66902010','24.00');
+INSERT INTO ky_CZ_cinema VALUES (NULL,'影院1','img/index/20.png','地址2','0512-66902010','24.00');
+INSERT INTO ky_CZ_cinema VALUES (NULL,'影院1','img/index/21.png','地址3','0512-66902010','24.00');
+INSERT INTO ky_CZ_cinema VALUES (NULL,'影院1','img/index/22.png','地址4','0512-66902010','24.00');
+INSERT INTO ky_SZ_cinema VALUES (NULL,'影院1','img/index/23.png','地址5','0512-66902010','24.00');

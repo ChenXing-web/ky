@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+   <head>
+     <title></title>
+       <meta charset="utf-8">
+			 <script>
+			 function regUser(){
+				 //获取数据
+				 var $uname=uname.value;
+				 var $upwd=upwd.value;
+				 var $phone=phone.value;
+				 var $email=email.value;
+				 var $user_name=user_name.value;
+         var $gender=null;//性别转为0,1
+						 if(m.checked){
+							 $gender=1;
+						 }else{
+						   $gender=0;
+						 }
+						 //ajax 4步骤
+         var xhr=new XMLHttpRequest();
+				 xhr.onreadystatechange=function(){
+					 if(xhr.readyState==4&&xhr.status==200){
+						 var result=xhr.responseText;
+						 if(result=="1"){
+							 alert("注册成功");
+							 //如果修改成功，自动跳回之前页面，并重新加载数据
+							 //使用BOM
+               location.href="http://127.0.0.1:8080/login.html";
+						 }else{
+							 alert("注册失败");
+						 }
+					 }
+				 }
+				 xhr.open("post","/pro/v1/reg",true);
+          //创建请求主体,把数据放到请求中
+					//而请求主体中有特殊字符，必须修改请求头
+					var formdata=`uname=${$uname}&upwd=${$upwd}&phone=${$phone}&email=${$email}&user_name=${$user_name}&gender=${$gender}`;
+         //而请求主体中有特殊字符，必须修改请求头
+				 xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+         xhr.send(formdata);
+			 }
+			 </script>
+   </head>
+	 <body>
+		 <fieldset style="width:400px;">
+			 <legend>用户注册</legend>
+			   <p>用户名称:
+		   		  <input type="text" id="uname"  maxlength="16" placeholder="16个以内的字母或数字"></p>
+		      <p>用户密码:
+		   		  <input type="password" id="upwd" maxlength="16" ></P>
+					<p>用户电话:
+					  <input type="tel" id="phone"></p>
+					<p>用户邮箱:
+					   <input type="email" id="email"></p>
+					<p>真实姓名:
+					   <input type="text" id="user_name"></p>
+		   		<p>用户性别:
+		   		  <input type="radio" name="gender"  id="m"><label for="m">男</label>
+            <input type="radio" name="gender"  id="w"><label for="w">女</label><br>
+          <button onclick="regUser()">免费注册</button>
+					</p>
+			 </fieldset>
+	 </body>
+</html>
